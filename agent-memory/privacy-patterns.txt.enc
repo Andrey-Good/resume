@@ -4,7 +4,7 @@
   "kdf": {
     "iterations": 1200000,
     "name": "pbkdf2-hmac-sha256",
-    "salt": "mb/mBiYQSGLcME8/YjzTfQ=="
+    "salt": "hocfGQaerH/uISexBlVE1w=="
   },
-  "token": "gAAAAABqLm6k32Ku5IL9vGNool87bz-njgZuyZMDWTuAgnwnfrYp422mlIYlNs9-ls_nFldPky57oUn6FN6TowiypbOIRBp4qA=="
+  "token": "gAAAAABqLnLN8pzW-m8RQeMu72bring0-qRjXiifT2ZLdtAyqCImHAyyiUE0RdcOiIsCQ7Y6vqzAeHgjUa00ICNmLbCnmgDAhg=="
 }
