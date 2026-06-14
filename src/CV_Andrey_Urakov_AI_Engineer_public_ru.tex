@@ -1,0 +1,165 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T2A,T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[english,russian]{babel}
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\else
+  \usepackage{fontspec}
+  \usepackage{polyglossia}
+  \setmainlanguage{russian}
+  \setotherlanguage{english}
+  \setmainfont{Times New Roman}
+\fi
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.62in}
+\addtolength{\textheight}{1.24in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt, parsep=0pt, topsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Ураков Андрей} \\ \vspace{1pt}
+    \small{}Екатеринбург $|$ \href{https://t.me/andrey\_urakov\_ml}{\underline{tg: @andrey\_urakov\_ml}} $|$ \href{mailto:urakov18.a@gmail.com}{\underline{urakov18.a@gmail.com}} $|$ \href{https://github.com/Andrey-Good}{\underline{github.com/Andrey-Good}}\end{center}
+
+\section{Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {УрФУ (Уральский Федеральный Университет)}{Екатеринбург}
+      {Бакалавриат, Прикладной Искусственный Интеллект (2 курс)}{2024 -- 2028}
+  \resumeSubHeadingListEnd
+
+\section{Ключевые курсы}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{Nand2Tetris, Программирование (повышенный уровень), Алгоритмы и анализ сложности, Дискретная математика и математическая логика, Теория вероятностей и математическая статистика, Математический анализ, Векторный анализ, Машинное обучение, Базы данных, Нереляционные базы данных, Архитектура ЭВМ, Компьютерные сети, Анализ данных и искусственный интеллект}}
+ \end{itemize}
+
+\section{Опыт работы}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {IDScan}{Челябинск}
+      {Junior Data Annotator (Full-time / Summer contract)}{Июль 2022 -- Август 2022}
+      \resumeItemListStart
+        \resumeItem{Работал оффлайн в закрытом контуре с чувствительными персональными данными, которые после ML-команда использовала для обучения CV-моделей.}
+        \resumeItem{Выполнял ручную разметку и транскрипцию изображений для создания датасета (OCR).}
+        \resumeItem{Проводил Data Cleaning и фильтрацию шума согласно техническим критериям качества.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Проекты (R\&D / Engineering)}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Active Learning SDK} $|$ \emph{Product Logic, Active Learning, Evaluation, Lead (Team Project)} $|$ \href{https://github.com/Andrey-Good/active-learning-orchestrator}{\underline{[Source Code]}}}{2026}
+          \resumeItemListStart
+            \resumeItem{Использовал AI-agent-assisted development, сохраняя ownership над идеей проекта, product contract, SDK workflow, evaluation design и acceptance criteria.}
+            \resumeItem{Выбрал acquisition strategies для SDK и benchmark suite, балансируя uncertainty, diversity, class/group balance и random baselines.}
+            \resumeItem{Исследовал calibration и Temperature Scaling; перевел полезные выводы в benchmark-критерии с ECE/NLL/Brier metrics и calibration-aware stop checks.}
+            \resumeItem{Вел evaluation/evidence work на capped real text-classification datasets: quality gate PASS; на Banking77 adaptive acquisition достиг capped full-train macro-F1 при 400 labels.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Local-First AI Agent Hub} $|$ \emph{Architecture Author, SQLite, Lead (Team of 5)} $|$ \href{https://drive.google.com/drive/folders/13iSz2zMOBYBxjSZVT6gQPQSsaGLZ3evt?usp=sharing}{\underline{[Arch Showcase]}}}{2025}
+          \resumeItemListStart
+            \resumeItem{Определил functional scope, roadmap и task decomposition; отвечал за сроки и качество поставки.}
+            \resumeItem{Автор Blueprint + Spec: определил архитектуру, бизнес-логику и критерии приемки по надежности.}
+            \resumeItem{Спроектировал механизм восстановления после сбоев: система восстанавливает консистентность стейта после внезапного падения процесса без потери данных.}
+            \resumeItem{Спроектировал планировщик задач с защитой от конфликтов параллельного запуска и зависания задач, используя атомарные операции и SQLite WAL.}
+            \resumeItem{Спроектировал изолированную среду выполнения на базе uv для предотвращения конфликтов зависимостей.}
+            \resumeItem{Зафиксировал в спецификации паттерн Reconcile Loop для управления триггерами: автоматическое приведение системы к целевому состоянию.}
+            \resumeItem{Спроектировал событийно-ориентированную архитектуру: отделил бизнес-логику от API.}
+            \resumeItem{Спроектировал оптимизацию I/O производительности через гибридное хранение: метаданные хранятся в БД, а тяжелые артефакты - в файловой системе.}
+            \resumeItem{UX: спроектировал UX-архитектуру, user-flow и состояния; без полного UI-дизайна.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Melanoma Detection System} $|$ \emph{ML Engineer, PyTorch, ONNX, Lead (Team of 4)}}{2025}
+          \resumeItemListStart
+            \resumeItem{Координировал полный цикл разработки: определил функциональный состав и roadmap, декомпозировал требования в технические задачи с критериями приемки, обеспечил соблюдение сроков и качества. Организовал защиту проекта (проектная деятельность УрФУ): 1-е место среди команд двух потоков, 98/100.}
+            \resumeItem{Реализовал полный цикл обучения для классификации изображений на базе CNN.}
+            \resumeItem{Внедрил техники улучшения качества данных: аугментация и устранение дисбаланса классов.}
+            \resumeItem{Оптимизировал модель для мобильного инференса: конвертация в ONNX и квантизация.}
+            \resumeItem{UI/UX: автор концепции и UI-дизайна; спроектировал поведение интерфейса (состояния/ошибки) и user-flow.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Review Summarizer Extension} $|$ \emph{Backend \& Core Logic, NLP, JS, NodeJS, Lead (Team of 4)} $|$ \href{https://github.com/Andrey-Good/RevAI}{\underline{[Source Code]}}}{2024}
+          \resumeItemListStart
+            \resumeItem{Координировал полный цикл разработки: определил функциональный состав и roadmap, декомпозировал требования в технические задачи с критериями приемки, обеспечил соблюдение сроков и качества.}
+            \resumeItem{Разработал полную архитектуру расширения (на Manifest v3): тело и структуру, кастомный DOM-парсер, скрипты и связывание логики с HTML-интерфейсом.}
+            \resumeItem{Реализовал серверную часть: проксирование запросов к LLM API и кэширование (хэширование запросов) для снижения задержки и затрат.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Навыки}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Языки программирования}{: Python (Multiprocessing, AsyncIO, Typer), SQL (SQLite)} \\     \textbf{ML/Data}{: PyTorch, Classical ML (linear models, SVM/kernels, Bayesian methods, PCA), Model Evaluation, Data Annotation} \\     \textbf{Engineering}{: Git, System Design (Local-First systems, Event-driven), Architecture Patterns (IPC, Queues), Linux (WSL environment)} \\     \textbf{Soft Skills}{: Technical Writing (RFC/Specs), Project Leadership (5 человек), Research Mindset} \\     \textbf{Языки}{: Russian (Native), English (B1 - Intermediate)}    }}
+ \end{itemize}
+
+\end{document}

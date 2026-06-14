@@ -1,0 +1,20 @@
+[project]
+name = "resume-workflow"
+version = "0.1.0"
+description = "Local workflow tooling for bilingual public/private resume builds."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "cryptography>=42.0.0",
+    "pypdf>=6.13.2",
+]
+
+[project.scripts]
+resume-workflow = "scripts.resume_workflow:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["scripts*"]

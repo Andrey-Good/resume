@@ -1,0 +1,45 @@
+# Local private CV files.
+cv_private/*.pdf
+src/*private*.tex
+*зачетная книжка*.pdf
+*зачётная книжка*.pdf
+*transcript*.pdf
+*gradebook*.pdf
+*Stepik*.pdf
+*Программа курса*.pdf
+
+# Local agent memory and private checks.
+agent-memory/MEMORY.md
+agent-memory/privacy-patterns.txt
+.private/
+
+# Agent orchestration scratch space.
+.agents/
+
+# Python and uv local state.
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# LaTeX build intermediates.
+build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Obsolete generated-output folders from earlier layouts.
+dist/
+artifacts/
+
+# Editor and OS noise.
+.DS_Store
+Thumbs.db

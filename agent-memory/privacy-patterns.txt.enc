@@ -1,0 +1,10 @@
+{
+  "cipher": "fernet",
+  "format": "resume-password-fernet-v1",
+  "kdf": {
+    "iterations": 1200000,
+    "name": "pbkdf2-hmac-sha256",
+    "salt": "mb/mBiYQSGLcME8/YjzTfQ=="
+  },
+  "token": "gAAAAABqLm6k32Ku5IL9vGNool87bz-njgZuyZMDWTuAgnwnfrYp422mlIYlNs9-ls_nFldPky57oUn6FN6TowiypbOIRBp4qA=="
+}
